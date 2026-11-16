@@ -1,64 +1,111 @@
 # Asmetha Sureshbabu Thoppe — Portfolio
 
-A premium, animated single-page portfolio built with React, Vite, Tailwind CSS,
-Framer Motion, GSAP (ScrollTrigger) and Three.js.
+A modern, responsive, and interactive personal portfolio showcasing my technical skills, projects, internship experience, certifications, hackathons, and achievements.
 
-## Stack
+Built using React, Vite, Tailwind CSS, Framer Motion, GSAP, and Three.js.
 
-- **React 18 + Vite** — component architecture, instant dev server
-- **Tailwind CSS** — design tokens defined in `tailwind.config.js` (colors, fonts, keyframes)
-- **Framer Motion** — entrance animations, page transitions, hover/tap micro-interactions
-- **GSAP + ScrollTrigger** — scroll-based parallax on the hero's ambient blobs
-- **Three.js** — mouse-reactive wireframe icosahedron + particle field in the hero (the site's signature visual)
-- **lucide-react** — icon set
+## ✨ Features
 
-## Getting started
+- Responsive single-page portfolio for desktop and mobile
+- Interactive hero section with a Three.js visual
+- Smooth animations and scroll-based effects
+- Dedicated sections for About, Skills, Experience, Projects, Certifications, Achievements, and Contact
+- Project cards with individual visual assets and repository/demo links where available
+- Resume viewing and download
+- Functional contact form
+- Dark theme with blue, purple, and cyan gradient accents
+
+## 🛠️ Tech Stack
+
+- **React 18** — Component-based UI
+- **Vite** — Development server and production build
+- **Tailwind CSS** — Styling and responsive design
+- **Framer Motion** — UI animations and interactions
+- **GSAP + ScrollTrigger** — Scroll-based animations
+- **Three.js** — Interactive 3D hero visual
+- **Lucide React** — Icons
+
+## 📂 Project Structure
+
+```text
+portfolio/
+├── public/
+│   ├── certificates/
+│   ├── images/
+│   │   └── projects/
+│   └── resume/
+│       └── Asmetha_Thoppe_Updated.pdf
+├── src/
+│   ├── components/
+│   ├── data/
+│   │   └── content.js
+│   ├── hooks/
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+├── package-lock.json
+├── tailwind.config.js
+├── postcss.config.js
+└── vite.config.js
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Asmetha0205/asmetha-portfolio.git
+cd asmetha-portfolio
+```
+
+Install dependencies:
 
 ```bash
 npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-Then open the printed local URL (usually `http://localhost:5173`).
+### Production Build
 
-To build for production:
+Build the project:
 
 ```bash
 npm run build
+```
+
+Preview the production build:
+
+```bash
 npm run preview
 ```
 
-## Project structure
+## 🎨 Customization
 
-```
-src/
-  components/     # one component per section/UI piece
-  data/content.js # all copy, skills, projects, timeline, certs — edit this first
-  hooks/          # useTypingEffect, useCounter
-  index.css       # Tailwind layers + custom utilities (.glass, .text-gradient, .glow-border)
-```
+- **Portfolio content:** Update `src/data/content.js` to modify profile information, skills, projects, experience, certifications, achievements, and contact details.
+- **Styling:** Update `tailwind.config.js` and `src/index.css`.
+- **Project visuals:** Project images and illustrations are maintained in `public/images/projects/`.
+- **Certificates:** Certificate PDFs are stored in `public/certificates/`.
+- **Resume:** The updated resume is stored in `public/resume/`.
 
-## Customizing
+## 📬 Connect With Me
 
-1. **Content** — everything text-based (name, roles, about copy, skills, projects,
-   timeline, certifications, achievements, contact links) lives in `src/data/content.js`.
-   Update it there rather than inside components.
-2. **Resume** — drop your PDF into `public/resume.pdf` (the Download Resume button
-   already points at `/resume.pdf`).
-3. **Project images** — each project card currently shows a placeholder gradient
-   with a number. Swap in real screenshots by replacing the placeholder block in
-   `src/components/ProjectCard.jsx` with an `<img>`.
-4. **Live demo links** — set a project's `demo` field in `content.js` to a URL to
-   enable its "Live Demo" button; leave it `null` to keep it disabled.
-5. **Colors/fonts** — all design tokens are centralized in `tailwind.config.js`
-   under `theme.extend`.
+- **GitHub:** https://github.com/Asmetha0205
+- **LinkedIn:** https://www.linkedin.com/in/asmetha-thoppe-a641b62a5/
 
-## Notes on the design
+---
 
-- Dark theme with a blue → purple → cyan accent gradient used consistently for
-  headings, buttons, progress bars and hover states.
-- The hero's 3D wireframe + particle field is mouse-reactive and doubles as a
-  visual nod to neural networks / AI, tying the "signature" visual moment
-  directly to the AI/ML focus of the portfolio.
-- Respects `prefers-reduced-motion` and keeps visible focus states for
-  keyboard navigation.
+Made with ❤️ by Asmetha Sureshbabu Thoppe.
