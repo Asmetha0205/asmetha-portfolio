@@ -1,0 +1,100 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="sp-bg" cx="70%" cy="35%" r="80%">
+      <stop offset="0%" stop-color="#1b1240"/>
+      <stop offset="55%" stop-color="#0c1024"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </radialGradient>
+    <radialGradient id="sp-orb" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a5f3ff"/>
+      <stop offset="45%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="sp-panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.08"/>
+    </linearGradient>
+    <linearGradient id="sp-book" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.6"/>
+    </linearGradient>
+    <filter id="sp-blur1"><feGaussianBlur stdDeviation="30"/></filter>
+    <filter id="sp-blur2"><feGaussianBlur stdDeviation="10"/></filter>
+    <filter id="sp-glow"><feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#sp-bg)"/>
+
+  <!-- ambient glow blobs -->
+  <circle cx="580" cy="120" r="150" fill="#8b5cf6" opacity="0.35" filter="url(#sp-blur1)"/>
+  <circle cx="120" cy="360" r="130" fill="#22d3ee" opacity="0.22" filter="url(#sp-blur1)"/>
+
+  <!-- perspective floor grid -->
+  <g stroke="#3b82f6" stroke-opacity="0.14">
+    <path d="M0 450 L800 450"/>
+    <path d="M0 410 L800 410"/>
+    <path d="M0 370 L800 370"/>
+    <path d="M400 450 L250 300"/>
+    <path d="M400 450 L550 300"/>
+    <path d="M400 450 L400 300"/>
+    <path d="M400 450 L100 300"/>
+    <path d="M400 450 L700 300"/>
+  </g>
+
+  <!-- AI assistant orb -->
+  <g filter="url(#sp-glow)">
+    <circle cx="590" cy="170" r="86" fill="url(#sp-orb)"/>
+    <circle cx="590" cy="170" r="46" fill="none" stroke="#a5f3ff" stroke-opacity="0.7" stroke-width="1.5"/>
+    <circle cx="590" cy="170" r="60" fill="none" stroke="#8b5cf6" stroke-opacity="0.5" stroke-width="1"/>
+    <circle cx="590" cy="170" r="14" fill="#e7ecf7"/>
+  </g>
+
+  <!-- connecting data lines from orb to notes -->
+  <g stroke="#22d3ee" stroke-opacity="0.5" stroke-width="1.2" fill="none">
+    <path d="M540 190 Q 440 210 360 175"/>
+    <path d="M545 220 Q 460 280 385 300"/>
+    <path d="M610 240 Q 560 300 480 330"/>
+  </g>
+
+  <!-- calendar panel -->
+  <g transform="translate(90,80)">
+    <rect width="190" height="140" rx="14" fill="url(#sp-panel)" stroke="#8b5cf6" stroke-opacity="0.4"/>
+    <rect x="16" y="16" width="158" height="22" rx="6" fill="#3b82f6" opacity="0.5"/>
+    <g fill="#e7ecf7" opacity="0.85">
+      <rect x="16" y="50" width="18" height="18" rx="4"/>
+      <rect x="42" y="50" width="18" height="18" rx="4" opacity="0.4"/>
+      <rect x="68" y="50" width="18" height="18" rx="4" opacity="0.4"/>
+      <rect x="94" y="50" width="18" height="18" rx="4" fill="#22d3ee"/>
+      <rect x="120" y="50" width="18" height="18" rx="4" opacity="0.4"/>
+      <rect x="146" y="50" width="18" height="18" rx="4" opacity="0.4"/>
+      <rect x="16" y="78" width="18" height="18" rx="4" opacity="0.4"/>
+      <rect x="42" y="78" width="18" height="18" rx="4" opacity="0.4"/>
+      <rect x="68" y="78" width="18" height="18" rx="4" fill="#8b5cf6"/>
+      <rect x="94" y="78" width="18" height="18" rx="4" opacity="0.4"/>
+      <rect x="120" y="78" width="18" height="18" rx="4" opacity="0.4"/>
+      <rect x="146" y="78" width="18" height="18" rx="4" opacity="0.4"/>
+    </g>
+    <rect x="16" y="106" width="158" height="18" rx="4" fill="#e7ecf7" opacity="0.15"/>
+  </g>
+
+  <!-- stacked books -->
+  <g transform="translate(60,330)">
+    <rect x="0" y="30" width="150" height="20" rx="4" fill="url(#sp-book)"/>
+    <rect x="8" y="10" width="150" height="20" rx="4" fill="#8b5cf6" opacity="0.75"/>
+    <rect x="0" y="-10" width="150" height="20" rx="4" fill="#22d3ee" opacity="0.6"/>
+    <line x1="14" y1="-2" x2="130" y2="-2" stroke="#050810" stroke-opacity="0.4" stroke-width="1.5"/>
+  </g>
+
+  <!-- floating holographic notes -->
+  <g opacity="0.9">
+    <rect x="330" y="150" width="120" height="70" rx="10" fill="none" stroke="#22d3ee" stroke-opacity="0.6"/>
+    <line x1="342" y1="170" x2="438" y2="170" stroke="#22d3ee" stroke-opacity="0.6"/>
+    <line x1="342" y1="184" x2="418" y2="184" stroke="#22d3ee" stroke-opacity="0.4"/>
+    <line x1="342" y1="198" x2="430" y2="198" stroke="#22d3ee" stroke-opacity="0.4"/>
+
+    <rect x="440" y="250" width="110" height="64" rx="10" fill="none" stroke="#8b5cf6" stroke-opacity="0.6" filter="url(#sp-blur2)" opacity="0.6"/>
+    <rect x="440" y="250" width="110" height="64" rx="10" fill="none" stroke="#8b5cf6" stroke-opacity="0.7"/>
+    <line x1="452" y1="270" x2="530" y2="270" stroke="#8b5cf6" stroke-opacity="0.7"/>
+    <line x1="452" y1="284" x2="510" y2="284" stroke="#8b5cf6" stroke-opacity="0.5"/>
+  </g>
+</svg>

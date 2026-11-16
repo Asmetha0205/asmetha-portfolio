@@ -1,0 +1,72 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="dd-bg" cx="45%" cy="35%" r="85%">
+      <stop offset="0%" stop-color="#1a1030"/>
+      <stop offset="55%" stop-color="#0d0f20"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </radialGradient>
+    <linearGradient id="dd-accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <filter id="dd-blur1"><feGaussianBlur stdDeviation="32"/></filter>
+    <filter id="dd-glow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#dd-bg)"/>
+
+  <circle cx="250" cy="180" r="150" fill="#8b5cf6" opacity="0.2" filter="url(#dd-blur1)"/>
+  <circle cx="600" cy="310" r="130" fill="#22d3ee" opacity="0.15" filter="url(#dd-blur1)"/>
+
+  <!-- browser window mockup -->
+  <g transform="translate(80,70)">
+    <rect width="400" height="300" rx="14" fill="#0d1424" stroke="#8b5cf6" stroke-opacity="0.4" stroke-width="1.5"/>
+    <!-- browser chrome bar -->
+    <rect width="400" height="36" rx="14" fill="#0a0f1e"/>
+    <rect y="14" width="400" height="22" fill="#0a0f1e"/>
+    <circle cx="20" cy="18" r="5" fill="#ef4444" opacity="0.7"/>
+    <circle cx="38" cy="18" r="5" fill="#f59e0b" opacity="0.7"/>
+    <circle cx="56" cy="18" r="5" fill="#22c55e" opacity="0.7"/>
+    <!-- URL bar -->
+    <rect x="72" y="10" width="260" height="16" rx="8" fill="#0d1424" stroke="#ffffff" stroke-opacity="0.1"/>
+    <text x="84" y="22" fill="#8a93ab" font-family="monospace" font-size="9">dreamydoodle.wordpress.com</text>
+
+    <!-- page content area -->
+    <!-- header hero -->
+    <rect x="12" y="48" width="376" height="80" rx="8" fill="#1b1240" opacity="0.8"/>
+    <text x="140" y="82" fill="#c4b5fd" font-family="'Space Grotesk', sans-serif" font-size="16" font-weight="600">Dreamy Doodle</text>
+    <text x="150" y="100" fill="#8a93ab" font-family="monospace" font-size="9">Creative WordPress Site</text>
+
+    <!-- content blocks -->
+    <rect x="12" y="140" width="118" height="80" rx="8" fill="#8b5cf6" opacity="0.2" stroke="#8b5cf6" stroke-opacity="0.3"/>
+    <rect x="140" y="140" width="118" height="80" rx="8" fill="#3b82f6" opacity="0.15" stroke="#3b82f6" stroke-opacity="0.3"/>
+    <rect x="268" y="140" width="120" height="80" rx="8" fill="#22d3ee" opacity="0.1" stroke="#22d3ee" stroke-opacity="0.3"/>
+
+    <!-- text lines -->
+    <rect x="12" y="232" width="250" height="8" rx="4" fill="#ffffff" opacity="0.1"/>
+    <rect x="12" y="246" width="200" height="8" rx="4" fill="#ffffff" opacity="0.08"/>
+    <rect x="12" y="260" width="225" height="8" rx="4" fill="#ffffff" opacity="0.08"/>
+
+    <!-- nav links -->
+    <rect x="280" y="236" width="96" height="24" rx="12" fill="url(#dd-accent)" opacity="0.7"/>
+    <text x="296" y="252" fill="#fff" font-family="monospace" font-size="9" font-weight="600">View Portfolio</text>
+  </g>
+
+  <!-- WordPress badge -->
+  <g transform="translate(540,100)" filter="url(#dd-glow)">
+    <circle r="45" fill="#21759b" opacity="0.25" transform="translate(45,45)"/>
+    <text x="10" y="52" fill="#93c5fd" font-family="monospace" font-size="13" font-weight="600">WP</text>
+    <text x="2" y="68" fill="#8a93ab" font-family="monospace" font-size="9">WordPress</text>
+  </g>
+
+  <!-- right panel -->
+  <g transform="translate(540,180)">
+    <rect width="200" height="130" rx="12" fill="#0d1424" opacity="0.85" stroke="#8b5cf6" stroke-opacity="0.35"/>
+    <text x="14" y="24" fill="#8a93ab" font-family="monospace" font-size="10">SITE · OVERVIEW</text>
+    <rect x="14" y="30" width="172" height="1" fill="#ffffff" opacity="0.08"/>
+    <text x="14" y="52" fill="#c4b5fd" font-family="monospace" font-size="11">WordPress CMS</text>
+    <text x="14" y="72" fill="#8a93ab" font-family="monospace" font-size="10">Custom Theme Design</text>
+    <text x="14" y="92" fill="#8a93ab" font-family="monospace" font-size="10">Responsive Layouts</text>
+    <text x="14" y="112" fill="#8a93ab" font-family="monospace" font-size="10">Content Management</text>
+  </g>
+</svg>

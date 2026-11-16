@@ -1,0 +1,86 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="st-bg" cx="30%" cy="25%" r="85%">
+      <stop offset="0%" stop-color="#0e2440"/>
+      <stop offset="55%" stop-color="#0a1226"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </radialGradient>
+    <linearGradient id="st-trend" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="60%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#a5f3ff"/>
+    </linearGradient>
+    <filter id="st-blur1"><feGaussianBlur stdDeviation="34"/></filter>
+    <filter id="st-glow"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#st-bg)"/>
+
+  <circle cx="640" cy="90" r="160" fill="#3b82f6" opacity="0.3" filter="url(#st-blur1)"/>
+  <circle cx="140" cy="380" r="130" fill="#22d3ee" opacity="0.18" filter="url(#st-blur1)"/>
+
+  <!-- neural network backdrop -->
+  <g stroke="#8b5cf6" stroke-opacity="0.35" stroke-width="1">
+    <line x1="60" y1="70" x2="180" y2="120"/>
+    <line x1="60" y1="140" x2="180" y2="120"/>
+    <line x1="60" y1="140" x2="180" y2="180"/>
+    <line x1="180" y1="120" x2="300" y2="90"/>
+    <line x1="180" y1="180" x2="300" y2="150"/>
+    <line x1="180" y1="120" x2="300" y2="150"/>
+    <line x1="300" y1="90" x2="410" y2="115"/>
+    <line x1="300" y1="150" x2="410" y2="115"/>
+  </g>
+  <g fill="#22d3ee">
+    <circle cx="60" cy="70" r="4"/>
+    <circle cx="60" cy="140" r="4"/>
+    <circle cx="180" cy="120" r="4.5"/>
+    <circle cx="180" cy="180" r="4.5"/>
+    <circle cx="300" cy="90" r="4.5"/>
+    <circle cx="300" cy="150" r="4.5"/>
+    <circle cx="410" cy="115" r="5" fill="#a5f3ff"/>
+  </g>
+
+  <!-- axis grid -->
+  <g stroke="#e7ecf7" stroke-opacity="0.06">
+    <line x1="40" y1="120" x2="760" y2="120"/>
+    <line x1="40" y1="200" x2="760" y2="200"/>
+    <line x1="40" y1="280" x2="760" y2="280"/>
+    <line x1="40" y1="360" x2="760" y2="360"/>
+  </g>
+
+  <!-- candlesticks -->
+  <g>
+    <line x1="470" y1="250" x2="470" y2="310" stroke="#22d3ee" stroke-opacity="0.8"/>
+    <rect x="462" y="265" width="16" height="30" fill="#22d3ee" opacity="0.85"/>
+
+    <line x1="500" y1="230" x2="500" y2="300" stroke="#8b5cf6" stroke-opacity="0.8"/>
+    <rect x="492" y="240" width="16" height="35" fill="#8b5cf6" opacity="0.7"/>
+
+    <line x1="530" y1="260" x2="530" y2="330" stroke="#22d3ee" stroke-opacity="0.8"/>
+    <rect x="522" y="270" width="16" height="40" fill="#22d3ee" opacity="0.6"/>
+
+    <line x1="560" y1="200" x2="560" y2="280" stroke="#3b82f6" stroke-opacity="0.9"/>
+    <rect x="552" y="210" width="16" height="45" fill="#3b82f6" opacity="0.85"/>
+
+    <line x1="590" y1="170" x2="590" y2="250" stroke="#22d3ee" stroke-opacity="0.9"/>
+    <rect x="582" y="180" width="16" height="42" fill="#22d3ee" opacity="0.85"/>
+
+    <line x1="620" y1="150" x2="620" y2="220" stroke="#a5f3ff" stroke-opacity="0.9"/>
+    <rect x="612" y="158" width="16" height="35" fill="#a5f3ff" opacity="0.8"/>
+  </g>
+
+  <!-- AI predicted trend line, glowing, extending past the candles -->
+  <g filter="url(#st-glow)">
+    <path d="M100 340 C 220 320, 300 300, 380 270 S 520 200, 620 170 S 700 130, 760 90"
+      fill="none" stroke="url(#st-trend)" stroke-width="3"/>
+    <path d="M620 170 L 760 90" stroke="#a5f3ff" stroke-width="2" stroke-dasharray="6 6" opacity="0.9"/>
+  </g>
+  <circle cx="760" cy="90" r="6" fill="#a5f3ff" filter="url(#st-glow)"/>
+
+  <!-- floating readout panel -->
+  <g transform="translate(60,50)" opacity="0.9">
+    <rect width="150" height="50" rx="10" fill="#0d1424" stroke="#3b82f6" stroke-opacity="0.4"/>
+    <text x="16" y="22" fill="#8a93ab" font-family="monospace" font-size="11">NASDAQ · AI MODEL</text>
+    <text x="16" y="40" fill="#22d3ee" font-family="monospace" font-size="14" font-weight="600">+ 12.4%</text>
+  </g>
+</svg>

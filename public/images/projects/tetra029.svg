@@ -1,0 +1,74 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="t2-bg" cx="60%" cy="35%" r="85%">
+      <stop offset="0%" stop-color="#1a0f30"/>
+      <stop offset="55%" stop-color="#0c0f24"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </radialGradient>
+    <linearGradient id="t2-accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <filter id="t2-blur1"><feGaussianBlur stdDeviation="32"/></filter>
+    <filter id="t2-glow"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#t2-bg)"/>
+
+  <circle cx="560" cy="130" r="160" fill="#8b5cf6" opacity="0.22" filter="url(#t2-blur1)"/>
+  <circle cx="160" cy="340" r="130" fill="#3b82f6" opacity="0.18" filter="url(#t2-blur1)"/>
+
+  <!-- hexagon grid pattern -->
+  <g stroke="#8b5cf6" stroke-opacity="0.12" fill="none">
+    <polygon points="200,80 230,63 260,80 260,113 230,130 200,113"/>
+    <polygon points="260,80 290,63 320,80 320,113 290,130 260,113"/>
+    <polygon points="320,80 350,63 380,80 380,113 350,130 320,113"/>
+    <polygon points="230,130 260,113 290,130 290,163 260,180 230,163"/>
+    <polygon points="290,130 320,113 350,130 350,163 320,180 290,163"/>
+    <polygon points="350,130 380,113 410,130 410,163 380,180 350,163"/>
+  </g>
+
+  <!-- central AI node -->
+  <g transform="translate(400,220)" filter="url(#t2-glow)">
+    <circle r="55" fill="url(#t2-accent)" opacity="0.3"/>
+    <circle r="40" fill="none" stroke="#8b5cf6" stroke-opacity="0.8" stroke-width="1.5"/>
+    <circle r="22" fill="none" stroke="#a5f3ff" stroke-opacity="0.6" stroke-width="1"/>
+    <circle r="8" fill="#c4b5fd"/>
+  </g>
+
+  <!-- connecting spokes -->
+  <g stroke="#8b5cf6" stroke-opacity="0.5" stroke-width="1" filter="url(#t2-glow)">
+    <line x1="345" y1="220" x2="230" y2="175"/>
+    <line x1="400" y1="165" x2="390" y2="90"/>
+    <line x1="455" y1="220" x2="560" y2="180"/>
+    <line x1="400" y1="275" x2="420" y2="360"/>
+    <line x1="345" y1="250" x2="200" y2="300"/>
+    <line x1="455" y1="250" x2="600" y2="310"/>
+  </g>
+
+  <!-- spoke endpoint nodes -->
+  <g fill="#22d3ee" filter="url(#t2-glow)">
+    <circle cx="230" cy="175" r="5"/>
+    <circle cx="390" cy="90" r="5"/>
+    <circle cx="560" cy="180" r="5"/>
+    <circle cx="420" cy="360" r="5"/>
+    <circle cx="200" cy="300" r="5"/>
+    <circle cx="600" cy="310" r="5"/>
+  </g>
+
+  <!-- info panel -->
+  <g transform="translate(540,60)">
+    <rect width="210" height="110" rx="12" fill="#0d1424" opacity="0.85" stroke="#8b5cf6" stroke-opacity="0.4"/>
+    <text x="14" y="24" fill="#8a93ab" font-family="monospace" font-size="10">TETRA029 · ROUND 2</text>
+    <rect x="14" y="30" width="182" height="1" fill="#ffffff" opacity="0.08"/>
+    <text x="14" y="50" fill="#c4b5fd" font-family="monospace" font-size="12" font-weight="600">TetraTHON 2026</text>
+    <text x="14" y="70" fill="#8a93ab" font-family="monospace" font-size="10">Second Round</text>
+    <text x="14" y="90" fill="#a5f3ff" font-family="monospace" font-size="10">AI · Innovation</text>
+  </g>
+
+  <!-- TetraTHON badge -->
+  <g transform="translate(60,50)">
+    <rect width="130" height="30" rx="15" fill="#3b82f6" opacity="0.2" stroke="#3b82f6" stroke-opacity="0.5"/>
+    <text x="16" y="20" fill="#93c5fd" font-family="monospace" font-size="11" font-weight="600">TetraTHON 2026</text>
+  </g>
+</svg>
