@@ -211,6 +211,7 @@ export const additionalProjects = [
 export const projects = featuredProjects
 
 
+
 export const timeline = [
   {
     year: '2023',
@@ -229,6 +230,8 @@ export const timeline = [
       'Explored Android development using Java and Firebase',
       'Started frontend development with HTML, CSS and JavaScript',
       'Created the GlobeTalk multilingual chat application',
+      'Completed 3D Modeling: Design and Development (Semester 2)',
+      'Studied Mobile Application Development for Non-Programmers using MIT App Inventor (Semester 3)',
     ],
   },
   {
@@ -239,15 +242,17 @@ export const timeline = [
       'Explored React, Flask, Firebase and full-stack application development',
       'Earned certifications from AWS, IBM, HackerRank and Simplilearn',
       'Strengthened knowledge of machine learning and prompt engineering',
+      'Studied French for Beginners (Semester 4)',
+      'Studied German Language (Semester 5)',
     ],
   },
   {
     year: '2026',
     items: [
-          {
-      text: 'Software Development Intern at Beaumont Solutions (July–September)',
-      highlight: true,
-    },
+      {
+        text: 'Software Development Intern at Beaumont Solutions (July–September)',
+        highlight: true,
+      },
       'Developed NASDAQ AI Stock Prediction System using Random Forest, LSTM, Spark and Hadoop',
       'Presented NASDAQ AI Stock Prediction System at the University Project Exhibition',
       'Participated in Odoo Hackathon and TetraTHON 2026, progressing to Round 2',
@@ -255,6 +260,7 @@ export const timeline = [
     ],
   },
 ]
+
 
 
 export const certifications = [
